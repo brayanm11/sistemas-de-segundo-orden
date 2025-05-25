@@ -110,43 +110,64 @@ Figura 1. Figura de prueba
 Incluya la respectiva etiqueta a modo de descripción de la figura y mantenga numeración consecutiva para todas las figuras de la clase.
 
 ## 7. Tablas
-En caso de necesitar la inclusión de tablas para organizar información se recomienda el uso de la herramienta del siguiente enlace https://www.tablesgenerator.com/markdown_tables , la cual permite organizar la información dentro de la tabla y genera el código markdown automáticamente:
+💡 Tabla 1: Efecto del factor de amortiguamiento
 
-💡**Ejemplo 3:** 
 
-| **Resultado** | **x = número de intentos hasta primer éxito** |
-|---------------|-----------------------------------------------|
-|       S       |                       1                       |
-|       FS      |                       2                       |
-|      FFS      |                       3                       |
-|      ...      |                      ...                      |
-|    FFFFFFS    |                       7                       |
-|      ...      |                      ...                      |
+| **$\zeta$** | **Tipo de respuesta** |**Comportamiento** |
+|-------------|-----------------------|------------------|
+|      0      | Oscilatorio puro      |Oscila indefinidamente|
+|       0 < $\zeta$ < 1    |  Subamortiguado  |Oscila y se estabiliza|
+|      1      |     Criticamente amortiguado  |Sin oscilaciones, rápida estabilización|
+|    > 1     |      sobreamortiguado   |Lenta estabilización sin oscilaciones |
 
-Tabla 1. Tabla de ejemplo
 
-Cada tabla debe llevar la etiqueta que describa su contenido y numeración consecutiva para todas las tablas
+
 
 ## 8. Código
-Teniendo en cuenta que el curso requiere del desarrollo de código matlab, c, c++ u otro. Si requiere incluir pequeños segmentos de código en los apuntes hágalos de la siguiente manera:
-
-💡**Ejemplo 4:**
+💡 Simulación con Python:
 ```
-var sumar2 = function(numero) {
-  return numero + 2;
-}
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.signal import lti, step
+
+# Parámetros
+wn = 5
+zeta = 0.6
+sys = lti([wn**2], [1, 2*zeta*wn, wn**2])
+t, y = step(sys)
+
+# Gráfica
+plt.plot(t, y, label=f'zeta = {zeta}')
+plt.axhline(1, color='gray', linestyle='--')
+plt.title('Respuesta al escalón - Sistema de Segundo Orden')
+plt.xlabel('Tiempo (s)')
+plt.ylabel('Salida')
+plt.grid(True)
+plt.legend()
+plt.show()
 ```
 
 ## 9. Ejercicios
 Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
 
-## Rúbrica
-| 0-1                                                                                   | 1-2                                                                                  | 2-3                                                                                                                                                                               | 3-4                                                                                                                                                                       | 4-5                                                                                                                                                                               |
-|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Presenta menos del 10% de los temas o no presenta por  el medio y formato  solicitado | Presenta menos del 40% de los temas solicitados, y  cumple parcialmente la plantilla | Presenta menos del 60% de los temas solicitados (con descripciones, gráficos tablas, etc), y cumple  parcialmente la plantilla. No presenta la totalidad  de ejercicios resueltos | Presenta menos del 80% de los temas solicitados (con descripciones, gráficos, tablas, etc) y cumple con  la plantilla. No presenta  la totalidad de ejercicios  resueltos | Presenta el 100% de los temas vistos en clase (con descripciones, gráficos, tablas, etc), siguiendo totalmente la plantilla. presenta la  totalidad de los ejercicios solicitados |
 
 ## 10. Conclusiones
-Agregue unas breves conclusiones sobre los temas trabajados en cada clase, puede ser a modo de resumen de lo trabajado o a indicando lo aprendido en cada clase
+
+Los sistemas de segundo orden se caracterizan completamente por $\zeta$ y $\omega_n$.
+
+La posición de polos en el plano complejo permite predecir la respuesta.
+
+Es fundamental distinguir entre amortiguamiento bajo, crítico y alto para interpretar la respuesta correctamente.
+
+El retardo (tiempo muerto) es crucial para el control y puede afectar la estabilidad.
 
 ## 11. Referencias
-Agregue un subtítulo al final donde pueda poner todas las referencias consultadas incluyendo el origen o fuente de los ejercicios planteados. Tambien dentro del texto referencie los textos o artículos consultados y las figuras y tablas dentro de la explicación de las mismas.
+
+Apuntes de clase: Sistemas de segundo orden.
+
+Dorf, R. & Bishop, R. (2011). Modern Control Systems.
+
+Ogata, K. (2010). Ingeniería de Control Moderna.
+
+Python con SciPy y Matplotlib para simulaciones.
+
