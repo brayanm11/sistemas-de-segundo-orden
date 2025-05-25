@@ -1,18 +1,76 @@
 # Sistemas de segundo orden
-El título de cada clase, correspondiente al tema general que se trabaje en clase. Siempre después de cada título de clase, redactar una breve introducción (mínimo un párrafo) que de una mirada general al tema
+
+Los sistemas de segundo orden son fundamentales en la ingeniería de control, ya que modelan una amplia gama de sistemas físicos como oscilaciones mecánicas, circuitos eléctricos RLC, estructuras con amortiguamiento, y sistemas de temperatura o presión. La dinámica de estos sistemas está gobernada por ecuaciones diferenciales de segundo orden, que pueden analizarse eficientemente mediante su representación en el dominio de Laplace. Esta clase busca explorar detalladamente el comportamiento de estos sistemas, sus características temporales, sus respuestas típicas y cómo se interpretan en el plano complejo.
+
+
 ## 1. Subtítulos
-Agregue todos los subtítulos que considere necesarios para estructurar el contenido de la clase. Es importante que considere jerarquías de los temas para definir el orden de estos subtítulos. Cada subtítulo debe ir numerado como una sección, de la manera en que lo presenta esta plantilla
+
+1.1 Introducción a los sistemas de segundo orden
+
+1.2 Función de transferencia estándar
+
+1.3 Parámetros dinámicos: frecuencia natural y factor de amortiguamiento
+
+1.4 Respuesta al escalón unitario
+
+1.5 Clasificación según el amortiguamiento
+
+1.6 Análisis en el planos
+
+1.7 Cálculo del tiempo pico, sobre impulso, y tiempo de establecimiento
+
+1.8 Sistemas con retardo (tiempo muerto)
 
 ## 2. Definiciones
-Utilice el símbolo '>' para crear bloques de texto. En la presente plantilla estas cajas están reservadas para resaltar las definiciones, las cuales deben ser breves, y la palabra o frase que se está definiendo debe estar en letra itálica. El inicio del bloque de texto debe realizarse con el emoji 🔑 .
->🔑 *Definición:* descripción precisa y clara del significado de una palabra, término, concepto o fenómeno. Es una explicación que establece los límites y el alcance de aquello que se está definiendo, aclarando su naturaleza, características esenciales y, en algunos casos, su relación con otros conceptos.
+🔑 Sistema de segundo orden: sistema cuya ecuación diferencial característica contiene una derivada de segundo orden, y su comportamiento se describe mediante una función de transferencia cuadrática.
+
+🔑 Frecuencia natural ($\omega_n$): frecuencia en radianes por segundo a la que un sistema oscilaría si no existiera amortiguamiento.
+
+🔑 Factor de amortiguamiento ($\zeta$): número adimensional que representa la cantidad de disipación de energía en el sistema.
+
+🔑 Sobreimpulso ($M_p$): máxima desviación porcentual del valor final, causada por la oscilación de la respuesta.
+
+🔑 Tiempo de establecimiento ($T_s$): tiempo requerido para que la respuesta permanezca dentro de un margen (generalmente 2%) alrededor del valor final.
+
+🔑 Tiempo pico ($T_p$): instante en que la respuesta alcanza su valor máximo.
+
+🔑 Tiempo muerto ($T_d$): retardo temporal entre la aplicación de la entrada y el inicio visible de la respuesta del sistema.
 
 ## 3. Subsecciones
-Las subsecciones pueden utilizarse para sub dividir ciertos temas que se tienen en clases, por ejemplo si se está trabajandolos conversores D/A, puede ser necesario subdividir este en circuito de resistencias ponderadas y circuito de escalera R2R. 
-### 3.1. Título de subsecciones
-Para la creación de estas subsecciones debe utilizar un tamaño de letra más pequeño, por lo tanto utilice la etiqueta '###' 
-### 3.2. Numeración de subsecciones
-Siga la numeración de la sección seguida de un punto y luego el número de la subsección.
+
+### 3.1. Función de transferencia estándar
+La forma canónica de un sistema de segundo orden es:
+
+$$G(s)=\frac{w_{n}^{2}}{s^{2}+2\zeta w_{n}+w_{n}^{2}}$$
+
+Esta expresión representa el cociente entre la salida y la entrada en el dominio de Laplace, bajo condiciones iniciales nulas.
+
+### 3.2. Clasificación según $\zeta$
+$\zeta > 1$: Sobreamortiguado (respuesta lenta, sin oscilaciones)
+
+$\zeta = 1$: Críticamente amortiguado (tiempo mínimo sin oscilaciones)
+
+$0 < \zeta < 1$: Subamortiguado (oscilación con atenuación)
+
+$\zeta = 0$: No amortiguado (oscilación pura, sin atenuación)
+
+### 3.3. Parámetros característicos de desempeño
+Frecuencia natural ($\omega_n$): determina la rapidez del sistema.
+
+Frecuencia amortiguada ($\omega_d$): $\omega_d = \omega_n \sqrt{1 - \zeta^2}$
+
+Tiempo pico ($T_p$): $\frac{\pi}{\omega_d}$
+
+Sobreimpulso ($M_p$): $100\cdot e^{\left(-\frac{\pi \zeta}{\sqrt{1 - \zeta^2}}\right)}%$
+
+Tiempo de establecimiento ($T_s$): $\frac{4}{\zeta \omega_n}$
+
+### 3.4. Tiempo muerto (retardo)
+Un sistema con retardo se representa como:
+
+$$G(s)=G_{0}(s).e^{-T\Delta s}$$
+
+Donde $G_0(s)$ es la función de transferencia sin retardo y $T_d$ es el tiempo muerto.
 
 ## 4. Ejemplos
 Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto o através de ecuaciones matemáticos, utilizar la palabra 'Ejemplo' seguido de una numeración consecutiva dentro de la clase. Utilice el emoji 💡 antecediendo la palabra.
