@@ -141,7 +141,11 @@ $$T_{s}=\frac{4}{\zeta w_{n}}$$
 💡Variación del Factor de Amortiguamiento
 Veamos la dinámica de sistemas de segundo orden ante la variación del factor de amortiguamiento:
 
+![figura1](f1a.png)
+
 💡Variación de la Frecuencia Natural No Amortiguada
+
+![figura2](f2a.png)
 
 ## 7. Tablas
 💡 Tabla 1: Efecto del factor de amortiguamiento
