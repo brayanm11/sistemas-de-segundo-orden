@@ -185,8 +185,37 @@ plt.legend()
 plt.show()
 ```
 
-## 9. Ejercicios
-Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
+## 9. Ejercicios:
+
+📚 Ejercicio 1
+
+Planteamiento: Dada la función:
+
+
+
+Solución:
+
+$\omega_n = 6$, $2\zeta\omega_n = 12$ $\Rightarrow \zeta = 1$
+
+Es un sistema críticamente amortiguado
+
+$T_s = \frac{4}{\zeta \omega_n} = \frac{4}{6} = 0.67$ s
+
+No hay sobreimpulso
+
+📚 Ejercicio 2
+
+Planteamiento: Calcular $T_p$ y $M_p$ para:
+
+
+
+Solución:
+
+$\omega_n = 3$, $\zeta = 0.5$
+
+$T_p = \frac{\pi}{3\sqrt{1 - 0.25}} = 1.21$ s
+
+$M_p = e^{-\pi \cdot 0.5 / \sqrt{1 - 0.25}} \cdot 100% \approx 16.3%$
 
 
 ## 10. Conclusiones
