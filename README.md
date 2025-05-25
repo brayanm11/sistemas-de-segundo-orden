@@ -114,40 +114,28 @@ $T_d = 2$ s
 Este retardo causa un desplazamiento temporal de la respuesta sin cambiar la forma de la curva.
 
 ## 5. Ecuaciones
-Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
 
-💡**Ejemplo 1:** si se va a representar la ecuación de la ley de Ohm se puede mostrar así $R=\frac{V}{I}$ o también,
+💡Función de transferencia estándar:
 
-$$R=\frac{V}{I}$$
+$$G(s)=\frac{w_{n}^{2}}{s^{2}+2\zeta w_{n}s+w_{n}^{2}}$$
 
-$${
-\begin{pmatrix*}[r]
-63 & 71 & 2\\
-6 & 829 & 12\\
-599 & 9 & 361
-\end{pmatrix*}
-}={\begin{pmatrix*}[r]
-63 & 71 & 2\\
-6 & 829 & 12\\
-599 & 9 & 361
-\end{pmatrix*}}$$
+💡Frecuencia amortiguada:
 
+$$w_{d}=w_{n}\sqrt{1-\zeta ^{2}}$$
 
-## 6. Figuras
-Todas las figuras que incluya deben ser generadas por ustedes, **no utilizar las figuras de las presentaciones**. Para incluir figuras puede seguir los siguientes pasos:
-* Primero escribimos ![]().
-* Después escribimos, dentro de los corchetes, el texto alternativo. Este es opcional y solo entra en acción cuando no se puede cargar la imagen correctamente.
-* Después escribimos, dentro de los paréntesis, la ubicación del archivo (ya sea una url o una ubicación dentro de algun folder local). Se recomienda poner las imágenes en una carpeta que se llame imágenes dentro del repositorio github para que no tengan problemas al cargar las imágenes.
+💡Tiempo pico:
 
-💡**Ejemplo 2:**
+$$T_{p}=\frac{\Pi }{w_{n}\sqrt{1-\zeta ^{2}}}$$
 
-![Figura de prueba](images/plantilla/Captura2.PNG)
+💡Sobre impulso:
 
-Figura 1. Figura de prueba
+$$M_{p}=e-(\frac{\Pi }{\sqrt{1-\zeta ^{2}}})*100%$$
 
-Incluya la respectiva etiqueta a modo de descripción de la figura y mantenga numeración consecutiva para todas las figuras de la clase.
+💡Tiempo de establecimiento:
 
-## 7. Tablas
+$$T_{s}=\frac{4}{\zeta w_{n}}$$
+
+## 6. Tablas
 💡 Tabla 1: Efecto del factor de amortiguamiento
 
 
@@ -161,7 +149,7 @@ Incluya la respectiva etiqueta a modo de descripción de la figura y mantenga nu
 
 
 
-## 8. Código
+## 7. Código
 💡 Simulación con Python:
 ```
 import numpy as np
@@ -185,11 +173,11 @@ plt.legend()
 plt.show()
 ```
 
-## 9. Ejercicios
+## 8. Ejercicios
 Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
 
 
-## 10. Conclusiones
+## 9. Conclusiones
 
 Los sistemas de segundo orden se caracterizan completamente por $\zeta$ y $\omega_n$.
 
@@ -199,7 +187,7 @@ Es fundamental distinguir entre amortiguamiento bajo, crítico y alto para inter
 
 El retardo (tiempo muerto) es crucial para el control y puede afectar la estabilidad.
 
-## 11. Referencias
+## 10. Referencias
 
 Apuntes de clase: Sistemas de segundo orden.
 
