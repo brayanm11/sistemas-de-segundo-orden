@@ -191,7 +191,7 @@ plt.show()
 
 Planteamiento: Dada la función:
 
-
+$$G(s)=\frac{36}{s^{2}+12s+36}$$
 
 Solución:
 
@@ -207,7 +207,7 @@ No hay sobreimpulso
 
 Planteamiento: Calcular $T_p$ y $M_p$ para:
 
-
+$$G(s)=\frac{9}{s^{2}+3s+9}$$
 
 Solución:
 
