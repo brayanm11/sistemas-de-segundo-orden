@@ -135,7 +135,15 @@ $$M_{p}=e-(\frac{\Pi }{\sqrt{1-\zeta ^{2}}})*100%$$
 
 $$T_{s}=\frac{4}{\zeta w_{n}}$$
 
-## 6. Tablas
+
+## 6. figuras
+
+💡Variación del Factor de Amortiguamiento
+Veamos la dinámica de sistemas de segundo orden ante la variación del factor de amortiguamiento:
+
+💡Variación de la Frecuencia Natural No Amortiguada
+
+## 7. Tablas
 💡 Tabla 1: Efecto del factor de amortiguamiento
 
 
@@ -149,7 +157,7 @@ $$T_{s}=\frac{4}{\zeta w_{n}}$$
 
 
 
-## 7. Código
+## 8. Código
 💡 Simulación con Python:
 ```
 import numpy as np
@@ -173,11 +181,11 @@ plt.legend()
 plt.show()
 ```
 
-## 8. Ejercicios
+## 9. Ejercicios
 Deben agregar 2 ejercicios con su respectiva solución, referentes a los temas tratados en cada una de las clases. Para agregar estos, utilice la etiqueta #, es decir como un nuevo título dentro de la clase con la palabra 'Ejercicios'. Cada uno de los ejercicios debe estar numerado y con su respectiva solución inmediatamente despues del enunciado. Antes del subtitulo de cada ejercicio incluya el emoji 📚
 
 
-## 9. Conclusiones
+## 10. Conclusiones
 
 Los sistemas de segundo orden se caracterizan completamente por $\zeta$ y $\omega_n$.
 
@@ -187,7 +195,7 @@ Es fundamental distinguir entre amortiguamiento bajo, crítico y alto para inter
 
 El retardo (tiempo muerto) es crucial para el control y puede afectar la estabilidad.
 
-## 10. Referencias
+## 11. Referencias
 
 Apuntes de clase: Sistemas de segundo orden.
 
@@ -196,4 +204,6 @@ Dorf, R. & Bishop, R. (2011). Modern Control Systems.
 Ogata, K. (2010). Ingeniería de Control Moderna.
 
 Python con SciPy y Matplotlib para simulaciones.
+
+https://controlautomaticoeducacion.com/control-realimentado/sistemas-de-segundo-orden/
 
