@@ -73,7 +73,45 @@ $$G(s)=G_{0}(s).e^{-T\Delta s}$$
 Donde $G_0(s)$ es la función de transferencia sin retardo y $T_d$ es el tiempo muerto.
 
 ## 4. Ejemplos
-Si en algún caso pretende dar un ejemplo explicativo ya sea a través de texto o através de ecuaciones matemáticos, utilizar la palabra 'Ejemplo' seguido de una numeración consecutiva dentro de la clase. Utilice el emoji 💡 antecediendo la palabra.
+💡 Ejemplo 1: Determinar parámetros del sistema
+
+Dada la función de transferencia:
+
+$$G(s)=\frac{25}{s^{2}+6s+25}$$
+
+Comparando con la forma estándar:
+
+$2\xi w_{n}=6$ y $w_{n}^{2}=25$
+
+Se obtiene:
+
+$w_{n}=5$, $\zeta =\frac{6}{2.5}=0.6$
+
+Cálculo de otros parámetros:
+
+$\omega_d = 5\sqrt{1 - 0.36} = 4$
+
+$T_p = \frac{\pi}{\omega_d} = 0.785$ s
+
+$T_s = \frac{4}{\zeta\omega_n} = 1.33$ s
+
+$M_p = 16.3%$
+
+💡 Ejemplo 2: Sistema con retardo
+
+Dado un sistema con retardo:
+
+$$G(s)=\frac{10}{s^{2}+3s+10}e^{-2s}$$
+
+Identificamos:
+
+$\omega_n = \sqrt{10} \approx 3.16$
+
+$2\zeta\omega_n = 3 \Rightarrow \zeta = 0.474$
+
+$T_d = 2$ s
+
+Este retardo causa un desplazamiento temporal de la respuesta sin cambiar la forma de la curva.
 
 ## 5. Ecuaciones
 Para la edición de ecuaciones debe utilizar la etiqueta '$$' al comienzo y final de la ecuación para que la ecuación quede centrada ocupando una línea. Si se quiere que la ecuación quede integrada en el texto debe utilizar la etiqueta '$' al comienzo y final de la ecuación. Las ecuaciones pueden ser editadas utilizando el código LATEX, en el siguiente enlace encuentran un editor de ecuaciones que les genera el código. http://www.alciro.org/tools/matematicas/editor-ecuaciones.jsp . Sin embargo hay muchas otras herramientas que pueden utilizar para esto.
